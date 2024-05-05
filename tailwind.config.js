@@ -2,10 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    container: {
+      center: true,
+      padding: '16px'
+    },
     extend: {
       colors: {
-        dark: "#0366d6",
-        primary: "rgba(20, 184, 166, var(--tw-text-opacity))"
+        dark: "#4477CE",
+        primary: "#FF76CE"
       }
     },
   },
