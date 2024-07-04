@@ -5,131 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monalisa Ashley - UI/UX Designer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-      .background {
-  width: 100%;
-  height: 100%;
-  --s: 105px; /* control the size */
-  --c1: #b9b9b9;
-  --c2: #dcdcdc;
-  --c3: #fafafa;
+        .button {
+  --bezier: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --edge-light: hsla(0, 0%, 50%, 0.8);
+  --text-light: rgba(255, 255, 255, 0.4);
+  --back-color: 240, 40%;
 
-  background: conic-gradient(
-        from 75deg,
-        var(--c1) 15deg,
-        var(--c2) 0 30deg,
-        #0000 0 180deg,
-        var(--c2) 0 195deg,
-        var(--c1) 0 210deg,
-        #0000 0
-      )
-      calc(0.5 * var(--s)) calc(0.5 * var(--s) / 0.577),
-    conic-gradient(
-      var(--c1) 30deg,
-      var(--c3) 0 75deg,
-      var(--c1) 0 90deg,
-      var(--c2) 0 105deg,
-      var(--c3) 0 150deg,
-      var(--c2) 0 180deg,
-      var(--c3) 0 210deg,
-      var(--c1) 0 256deg,
-      var(--c2) 0 270deg,
-      var(--c1) 0 286deg,
-      var(--c2) 0 331deg,
-      var(--c3) 0
-    );
-  background-size: var(--s) calc(var(--s) / 0.577);
-  /* 0.577=tan(30deg)*/
+  cursor: pointer;
+  padding: 0.7em 1em;
+  border-radius: 0.5em;
+  min-height: 2.4em;
+  min-width: 3em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  font-weight: bold;
+
+  color: hsla(0, 0%, 90%);
+  border: 0;
+  box-shadow: inset 0.4px 1px 4px var(--edge-light);
+
+  transition: all 0.1s var(--bezier);
+}
+
+.button:hover {
+  --edge-light: hsla(0, 0%, 50%, 1);
+  text-shadow: 0px 0px 10px var(--text-light);
+  box-shadow: inset 0.4px 1px 4px var(--edge-light),
+    2px 4px 8px hsla(0, 0%, 0%, 0.295);
+  transform: scale(1.1);
+}
+
+.button:active {
+  --text-light: rgba(255, 255, 255, 1);
+
+  background: linear-gradient(
+    140deg,
+    hsla(var(--back-color), 50%, 1) min(2em, 20%),
+    hsla(var(--back-color), 50%, 0.6) min(8em, 100%)
+  );
+  box-shadow: inset 0.4px 1px 8px var(--edge-light),
+    0px 0px 8px hsla(var(--back-color), 50%, 0.6);
+  text-shadow: 0px 0px 20px var(--text-light);
+  color: hsla(0, 0%, 100%, 1);
+  letter-spacing: 0.1em;
+  transform: scale(1);
+}
+
+input[type="radio"]:checked + label {
+  background-color: rgb(244 114 182);
+  color: whitesmoke;
 }
 
     </style>
 </head>
-<body class="background">
+<body class="bg-blue-100">
     <div class="container mx-auto px-4 py-12">
         <div class="flex lg:flex-row gap-8">
-            <div class="shadow-xl shadow-indigo-400 bg-stone-800 rounded-xl mt-24 grid place-items-center w-1/4 static" style="height: 400px;">
+            <div class="bg-blue-200 py-24 shadow-xl shadow-indigo-400 rounded-xl mt-24 grid place-items-center w-1/4 static" style="height: 450px;">
                 <img src="img/profile2.jpeg" alt="Monalisa Ashley" class="absolute top-14 left-32 rounded-lg h-40 object-cover">
-                <h2 class="text-2xl font-bold mt-4">Bayu Dwi Istiyanto</h2>
-                <p class="text-gray-600">Website/Mobile Developer</p>
-                <div class="flex gap-4 mt-4">
-                    <a href="#" class="bg-blue-500 text-white p-2 rounded-full">
+                <h2 class="text-2xl font-bold text-blue-400 hover:text-blue-300">Bayu Dwi Istiyanto</h2>
+                <p class="text-gray-400">Website/Mobile Developer</p>
+                <div class="mt-4 flex justify-evenly w-44">
+                    <a href="#" class="bg-blue-400 hover:bg-blue-300 text-white rounded-full p-2">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="bg-blue-500 text-white p-2 rounded-full">
+                    <a href="#" class="bg-blue-300 hover:bg-blue-200 text-white rounded-full p-2">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="bg-blue-500 text-white p-2 rounded-full">
+                    <a href="#" class="bg-pink-500 hover:bg-pink-400 text-white rounded-full p-2">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="bg-blue-500 text-white p-2 rounded-full">
+                    <a href="#" class="bg-blue-700 hover:bg-blue-600 text-white rounded-full p-2">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
-                <div class="mt-8">
+                <div class="mt-8 grid place-items-center">
                     <div class="flex items-center gap-2 mb-2">
                         <i class="fas fa-phone-alt text-gray-600"></i>
-                        <p class="text-gray-600">+123 456 7890</p>
+                        <p class="text-gray-400">+62 87850431453</p>
                     </div>
                     <div class="flex items-center gap-2 mb-2">
                         <i class="fas fa-envelope text-gray-600"></i>
-                        <p class="text-gray-600">Example@Mail.Com</p>
+                        <p class="text-gray-400">bayudwiistiyanto@gmail.com</p>
                     </div>
                     <div class="flex items-center gap-2 mb-2">
                         <i class="fas fa-map-marker-alt text-gray-600"></i>
-                        <p class="text-gray-600">Hong Kong China</p>
+                        <p class="text-gray-400">Purwodadi, Indonesia</p>
                     </div>
                     <div class="flex items-center gap-2 mb-2">
                         <i class="fas fa-calendar-alt text-gray-600"></i>
-                        <p class="text-gray-600">May 27, 1990</p>
+                        <p class="text-gray-400">Sep 21, 1996</p>
                     </div>
                 </div>
-                <button class="bg-blue-500 text-white p-2 rounded-full mt-8">Download CV</button>
+                <button class="button mt-4 bg-pink-400">Download CV</button>
             </div>
               
             <div class="w-full lg:w-2/3">
-              <div class="flex justify-center gap-4">
-                <a href="#" class="bg-pink-500 text-white p-2 rounded-full">
-                    <i class="fas fa-user"></i>
-                    About
-                </a>
-                <a href="#" class="bg-pink-500 text-white p-2 rounded-full">
-                    <i class="fas fa-file-alt"></i>
-                    Resume
-                </a>
-                <a href="#" class="bg-pink-500 text-white p-2 rounded-full">
-                    <i class="fas fa-briefcase"></i>
-                    Works
-                </a>
-                <a href="#" class="bg-pink-500 text-white p-2 rounded-full">
-                    <i class="fas fa-blog"></i>
-                    Blogs
-                </a>
-                <a href="#" class="bg-pink-500 text-white p-2 rounded-full">
-                    <i class="fas fa-address-card"></i>
-                    Contact
-                </a>
+              <div class="flex justify-end gap-4">
+                <div class="flex space-x-4">
+                    <div class="flex space-x-4">
+                        <input type="radio" id="about" name="nav" class="hidden">
+                        <label for="about" class="p-5 flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
+                            <i class="fas fa-user"></i>
+                          About
+                        </label>
+                        
+                        <input type="radio" id="resume" name="nav" class="hidden">
+                        <label for="resume" class="flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
+                            <i class="fas fa-file-alt"></i>
+                            Resume
+                        </label>
+                        
+                        <input type="radio" id="works" name="nav" class="hidden">
+                        <label for="works" class="flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
+                            <i class="fas fa-briefcase"></i>
+                            Works
+                        </label>
+                        
+                        <input type="radio" id="blogs" name="nav" class="hidden">
+                        <label for="blogs" class="flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
+                            <i class="fas fa-blog"></i>
+                            Blogs
+                        </label>
+                        
+                        <input type="radio" id="contact" name="nav" class="hidden">
+                        <label for="contact" class="flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
+                            <i class="fas fa-address-book"></i>
+                            Contact
+                        </label>
+                      </div>
+                  </div>
             </div>
-                <h2 class="text-3xl font-bold">About</h2>
-                <p class="text-gray-600 mt-4">I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
-                <p class="text-gray-600 mt-4">My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
-                <h3 class="text-2xl font-bold mt-8">What I Do!</h3>
+               <div class="mt-4 p-5 w-full bg-blue-200 shadow-xl shadow-indigo-400 rounded-xl">
+                <h2 class="text-3xl font-bold text-blue-400">About</h2>
+                <p class="text-gray-500 mt-4">I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                <p class="text-gray-500 mt-4">My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
+                <h3 class="text-2xl text-blue-400 font-bold mt-8">What I Do!</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-                    <div class="border rounded-lg p-4">
+                    <div class="border border-pink-400 rounded-lg p-4">
                         <div class="flex items-center gap-4 mb-2">
-                            <i class="fas fa-pencil-alt text-gray-600"></i>
-                            <h4 class="text-xl font-bold">UI/UX Design</h4>
+                            <i class="fas fa-pencil-alt text-blue-400"></i>
+                            <h4 class="text-xl font-bold text-blue-400">UI/UX Design</h4>
                         </div>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
                     </div>
-                    <div class="border rounded-lg p-4">
+                    <div class="border rounded-lg p-4 border-pink-400">
                         <div class="flex items-center gap-4 mb-2">
-                            <i class="fas fa-laptop-code text-gray-600"></i>
-                            <h4 class="text-xl font-bold">App Development</h4>
+                            <i class="fas fa-laptop-code text-blue-400"></i>
+                            <h4 class="text-xl font-bold text-blue-400">App Development</h4>
                         </div>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
                     </div>
                 </div>
+               </div>
             </div>
         </div>
         
