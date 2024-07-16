@@ -66,10 +66,44 @@ input[type="radio"]:checked + label {
     </style>
 </head>
 <body class="bg-blue-100">
-    <div class="container mx-auto px-4 py-12">
-        <div class="flex lg:flex-row gap-8">
-            <div class="bg-blue-200 py-24 shadow-xl shadow-indigo-400 rounded-xl mt-24 grid place-items-center w-1/4 static" style="height: 450px;">
-                <img src="img/profile2.jpeg" alt="Monalisa Ashley" class="absolute top-14 left-32 rounded-lg h-40 object-cover">
+    <div class="container mx-auto px-2 py-8">
+        <div class="z-10 flex justify-end fixed right-11 gap-3">
+            <div>
+                <input data-target="#about-section" type="radio" id="about" name="nav" class="hidden">
+                    <label for="about" class="p-5 flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
+                        
+                        <i class="fas fa-user"></i>
+                          About
+                    </label>
+            </div>
+            <div>
+                <input data-target="#resume-section" type="radio" id="resume" name="nav" class="hidden">
+                    <label for="resume" class="p-5 flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
+                        
+                        <i class="fas fa-file-alt"></i>
+                        Resume
+                    </label>
+            </div>
+            <div>
+                <input data-target="#works-section" type="radio" id="works" name="nav" class="hidden">
+                    <label for="works"class="p-5 flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
+                        
+                        <i class="fas fa-briefcase"></i>
+                        Works
+                    </label>
+            </div>
+            <div>
+                <input data-target="#contact-section" type="radio" id="contact" name="nav" class="hidden">
+                    <label for="contact" class="p-5 flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
+                        <i class="fas fa-address-book"></i>
+                         Contact
+                    </label>
+            </div>
+          </div>
+          <div class="flex flex-row w-full mt-20" style="height: 1000px;">
+            <div class="w-1/4 left-11 fixed">
+                <div class="bg-blue-200 py-24 shadow-xl shadow-indigo-400 rounded-xl grid place-items-center" style="height: 450px;">
+                <img src="img/profile2.jpeg" class="absolute -top-16 rounded-lg h-40 object-cover">
                 <h2 class="text-2xl font-bold text-blue-400 hover:text-blue-300">Bayu Dwi Istiyanto</h2>
                 <p class="text-gray-400">Website/Mobile Developer</p>
                 <div class="mt-4 flex justify-evenly w-44">
@@ -106,45 +140,10 @@ input[type="radio"]:checked + label {
                 </div>
                 <button class="button mt-4 bg-pink-400">Download CV</button>
             </div>
-              
-            <div class="w-full lg:w-2/3">
-              <div class="flex justify-end gap-4">
-                <div class="flex space-x-4">
-                    <div class="flex space-x-4">
-                        <input type="radio" id="about" name="nav" class="hidden">
-                        <label for="about" class="p-5 flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
-                            <i class="fas fa-user"></i>
-                          About
-                        </label>
-                        
-                        <input type="radio" id="resume" name="nav" class="hidden">
-                        <label for="resume" class="flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
-                            <i class="fas fa-file-alt"></i>
-                            Resume
-                        </label>
-                        
-                        <input type="radio" id="works" name="nav" class="hidden">
-                        <label for="works" class="flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
-                            <i class="fas fa-briefcase"></i>
-                            Works
-                        </label>
-                        
-                        <input type="radio" id="blogs" name="nav" class="hidden">
-                        <label for="blogs" class="flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
-                            <i class="fas fa-blog"></i>
-                            Blogs
-                        </label>
-                        
-                        <input type="radio" id="contact" name="nav" class="hidden">
-                        <label for="contact" class="flex flex-col items-center justify-center w-20 rounded-md text-pink-400 bg-gray-100 cursor-pointer">
-                            <i class="fas fa-address-book"></i>
-                            Contact
-                        </label>
-                      </div>
-                  </div>
             </div>
-               <div class="mt-4 p-5 w-full bg-blue-200 shadow-xl shadow-indigo-400 rounded-xl">
-                <h2 class="text-3xl font-bold text-blue-400">About</h2>
+            <div class="z-0 w-4/6 absolute right-11 bg-blue-200 shadow-xl shadow-indigo-400 rounded-xl p-8">
+                <section id="about-section">
+                    <h2 class="text-3xl font-bold text-blue-400">About</h2>
                 <p class="text-gray-500 mt-4">I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
                 <p class="text-gray-500 mt-4">My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
                 <h3 class="text-2xl text-blue-400 font-bold mt-8">What I Do!</h3>
@@ -164,11 +163,86 @@ input[type="radio"]:checked + label {
                         <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
                     </div>
                 </div>
-               </div>
+                </section>
+                <section id="resume-section" class="mt-10">
+                    <h2 class="text-3xl font-bold text-blue-400">Resume</h2>
+                <p class="text-gray-500 mt-4">I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                <p class="text-gray-500 mt-4">My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
+                <h3 class="text-2xl text-blue-400 font-bold mt-8">What I Do!</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                    <div class="border border-pink-400 rounded-lg p-4">
+                        <div class="flex items-center gap-4 mb-2">
+                            <i class="fas fa-pencil-alt text-blue-400"></i>
+                            <h4 class="text-xl font-bold text-blue-400">UI/UX Design</h4>
+                        </div>
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
+                    </div>
+                    <div class="border rounded-lg p-4 border-pink-400">
+                        <div class="flex items-center gap-4 mb-2">
+                            <i class="fas fa-laptop-code text-blue-400"></i>
+                            <h4 class="text-xl font-bold text-blue-400">App Development</h4>
+                        </div>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
+                    </div>
+                </div>
+                </section>
+                <section id="works-section" class="mt-10">
+                    <h2 class="text-3xl font-bold text-blue-400">Works</h2>
+                <p class="text-gray-500 mt-4">I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                <p class="text-gray-500 mt-4">My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
+                <h3 class="text-2xl text-blue-400 font-bold mt-8">What I Do!</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                    <div class="border border-pink-400 rounded-lg p-4">
+                        <div class="flex items-center gap-4 mb-2">
+                            <i class="fas fa-pencil-alt text-blue-400"></i>
+                            <h4 class="text-xl font-bold text-blue-400">UI/UX Design</h4>
+                        </div>
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
+                    </div>
+                    <div class="border rounded-lg p-4 border-pink-400">
+                        <div class="flex items-center gap-4 mb-2">
+                            <i class="fas fa-laptop-code text-blue-400"></i>
+                            <h4 class="text-xl font-bold text-blue-400">App Development</h4>
+                        </div>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
+                    </div>
+                </div>
+                </section>
+                <section id="contact-section" class="mt-10">
+                    <h2 class="text-3xl font-bold text-blue-400">Contact</h2>
+                <p class="text-gray-500 mt-4">I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                <p class="text-gray-500 mt-4">My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
+                <h3 class="text-2xl text-blue-400 font-bold mt-8">What I Do!</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                    <div class="border border-pink-400 rounded-lg p-4">
+                        <div class="flex items-center gap-4 mb-2">
+                            <i class="fas fa-pencil-alt text-blue-400"></i>
+                            <h4 class="text-xl font-bold text-blue-400">UI/UX Design</h4>
+                        </div>
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
+                    </div>
+                    <div class="border rounded-lg p-4 border-pink-400">
+                        <div class="flex items-center gap-4 mb-2">
+                            <i class="fas fa-laptop-code text-blue-400"></i>
+                            <h4 class="text-xl font-bold text-blue-400">App Development</h4>
+                        </div>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt</p>
+                    </div>
+                </div>
+                </section>
             </div>
-        </div>
-        
+          </div>
     </div>
     <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('input[name="nav"]').forEach(input => {
+            input.addEventListener('change', function() {
+                const target = document.querySelector(this.dataset.target);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
