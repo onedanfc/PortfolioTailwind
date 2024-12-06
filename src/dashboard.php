@@ -1,3 +1,9 @@
+<?php 
+// Start the 
+session session_start(); 
+// Check if the user is logged in 
+if (!isset($_COOKIE['user'])) { header("Location: index.html"); exit(); }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,6 +143,7 @@ input[type="radio"]:checked + label {
                     </div>
                 </div>
                 <button class="button mt-4" style="background-color: #F4DEB3;"><p style="color: whitesmoke;">Download CV</p></button>
+                <p><a href="logout.php">Logout</a></p>
             </div>
             </div>
             <div class="mt-5 z-0 w-4/6 absolute right-11 shadow-xl shadow-indigo-400 rounded-xl p-8" style="background-color: #FFF4EA;">
